@@ -14,7 +14,7 @@
         <p class="lead mt-4 mb-5">
           A 100% community organized developer conference with industry experts presenting on exciting topics!
         </p>
-        <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Reserve Your Seat</a>
+        <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a>
         <a *ngIf="config?.speakerURL" target="_blank" rel="noopener" [href]="config?.speakerURL" class="btn btn-default btn-lg" rel="nofollow">Become A Speaker</a>
       </div>
       <div class="arrow bounce">
@@ -33,16 +33,231 @@
   <!--Section: About-->
   <section class="text-center" *ngIf="!config?.eventType || config?.eventType === 'DevFest'">
     <p>
-      <strong>GDG DevFests</strong> are large, community-run developer events happening around the globe focused on community
-      building and learning about Google’s technologies. Each DevFest is carefully crafted for you by your local GDG community
-      to bring in awesome speakers, great topics, and lots fun! While no two events will be exactly alike, each GDG DevFest will,
-      at its core, be powered by a shared belief that when developers come together to exchange ideas,
-      amazing&nbsp;things&nbsp;can&nbsp;happen!
-    </p>
-    <p>
-      <strong>{{ config?.eventName }}</strong> is a 100% community organized full-day developer conference featuring awesome
-      world-class speakers from technology leaders within the community as well as Google product team&nbsp;developers.
-    </p>
+        <strong>Back by popular demand…. DevFest 2019!</strong>
+      </p> 
+      <p>
+        DevFest is a 100% community organized, full-day developer conference featuring world-class technology thought leaders
+        and members of the Google product team.
+      </p> 
+      <p>
+        What does that <strong>actually</strong> mean?
+      </p> 
+      <p>
+        We’re bringing you an all-in one opportunity to <strong>up-level</strong> your game as a techie, 
+        whether you’re a total beginner, an expert, or somewhere in-between…
+      </p> 
+      <p>
+        … to learn about <strong>new technologies</strong>, with <strong>practical strategies</strong> to learn and implement them…
+      </p> 
+      <p>
+        … to <strong>connect with the LA tech community</strong> in a setting where <strong>we’ve done the hard work for you</strong>…
+      </p> 
+      <p>
+        … the event’s structure and our support team are there for you, <strong>ensuring everyone is welcomed and included</strong>…
+      </p> 
+      <p>
+        … where we can all <strong>get inspired</strong> by learning about each other and <strong>exploring cutting edge technologies</strong>!
+      </p> 
+      <p>
+        Most conferences and networking events leave you in a room to fend for yourself. 
+        They focus on the <strong>information</strong>, and maybe even the <strong>implementation</strong>…
+      </p> 
+      <p>
+        But they’re <strong>completely</strong> leaving out the greater part of the equation: <strong>human interaction</strong>. 
+        And we don’t blame them - it’s easy to overlook that the humans are the most important part of building great tech!
+      </p> 
+      <p>
+        Even with the world’s <strong>greatest ideas </strong>, 
+        you can’t transcend your career blocks if you’re disconnected from the community around you…
+      </p> 
+      <p>
+        If you don’t think you’re <strong>cool and interesting enough for others to connect with</strong>, 
+        you <strong>won’t put yourself out there</strong>.
+      </p> 
+      <p>
+        Trust us, we know you might be thinking… 
+      </p> 
+      <p>
+        <strong>I know enough (technologies, people), I just need to know what to do next</strong>.
+      </p> 
+      <p>
+        We’ve got you. We’re going to cover it all, and more when you join us at DevFest LA 2019! 
+        You’ll go deep with us, and we’ll be with every one of you every step of the way.
+        <strong>“When we come together to exchange ideas, amazing things can happen!”</strong>
+      </p> 
+      <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a>
+      <p>
+        <u>FEATURED TOPICS</u>
+      </p> 
+      <p>
+        Kotlin, with an engineer from SoundCloud
+      </p> 
+      <p>
+        Going Serverless, with a Google Developer Advocate
+      </p> 
+      <p>
+        AI, with a Google Artificial Intelligence Advocate
+      </p> 
+      <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a>
+      <p>
+        <u>WHO IS THIS FOR</u>?
+      </p> 
+      <p>
+        Are you:
+      </p> 
+      <p>
+           -  A developer
+      </p> 
+      <p>
+           -  A designer
+      </p> 
+      <p>
+           -  A technical expert
+      </p> 
+      <p>
+           -  Interested in tech
+      </p> 
+      <p>
+           -  Someone who works with tech people
+      </p> 
+      <p>
+        <u>If your answer to any of the above is <strong>yes</strong>, this event is for you!</u>
+      </p>
+      <p>
+        This event isn’t for you if:
+      </p> 
+      <p>
+           -  You don’t have any interest in tech
+      </p> 
+      <p>
+           -  Cutting edge technologies bore you
+      </p> 
+      <p>
+           -  You’re not willing to ‘treat people excellently’ and abide by our code of conduct
+      </p> 
+      <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a>
+      <p>
+        <u>HANG ON A MOMENT, WHO <STRONG>ARE</STRONG> YOU PEOPLE</u>?
+      </p> 
+      <p>
+        We are community organizers leading Google Developer Groups (GDGs) in the Los Angeles area!
+      </p> 
+      <p>
+        You might be thinking... “Ok cool, <strong>what in the world is a GDG</strong>?”...
+      </p> 
+      <p>
+        ... a GDG is a <strong>Google-sponsored, 100% community organized group 
+        bringing developers and other techies together</strong> to explore new technologies and build deep connections...
+      </p> 
+      <p>
+        ... Phew, that’s a mouthful!
+      </p> 
+      <p>
+        In practice, all this means is: we’re a bunch of people who meet regularly, support one another, and learn about cool tech stuff. 
+        Sometimes, we even facilitate each other getting new jobs! Pretty cool, yeah?
+      </p> 
+      <img src="https://firebasestorage.googleapis.com/v0/b/devfest-delorean.appspot.com/o/2019%2FsiteConfig%2FmeetGDG.png?alt=media&token=46fbe352-b78f-42f0-a3bf-ff7e1b37a397" alt="meetGDG">
+      <p>
+        We <u>pinky promise</u> that when you come to DevFest, you will have <strong>fun</strong>, 
+        you will <strong>learn</strong> something, and you will <strong>connect</strong> with someone new!
+      </p>
+      <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a>
+      <p>
+        <strong>TICKETS AVAILABLE AT:</strong> <a href="http://bit.ly/df2019la">http://bit.ly/df2019la</a>
+      </p>
+      <p>
+        <u>OUR STORY</u>
+      </p>
+      <p>
+        DevFests provide a unique opportunity to learn about developer technologies, 
+        meet other techies in your local community, and join a worldwide technologist ecosystem!
+      </p>
+      <p>
+        Our friends at GDG Nantes share our passions, and we have modeled DevFest LA after their deeply successful framework. 
+        Check out their video on the amazing results DevFests bring below!
+      </p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/8_TH1KYBWEg" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </p>
+      <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a>
+      <p>
+        <u>FAQ'S</u>
+      </p>
+      <p>
+        <strong>Who is this event for?</strong>
+      </p>
+      <p>
+        Everyone and anyone interested in tech - from beginner developers to experienced professionals - are welcome to join. 
+        Our content is curated to serve everyone from total beginners to leading experts.
+      </p>
+      <p>
+        <strong>What if I don’t know anyone there, will I feel out of place?</strong>
+      </p>
+      <p>
+        We have curated an experience to make sure you are woven into the community whether you come with someone you know or 
+        arrive by yourself. You’ll find it easy to connect with other like-minded techies as we’ve designed the whole experience to be 
+        fun, educational and inspiring. This is more than just a group of people at an event, it’s a supportive community where you are 
+        100% welcome and accepted, no matter where you’re at.
+      </p>
+      <p>
+        <strong>Is this something I can afford to attend?</strong>
+      </p>
+      <p>
+        Affordability is a priority for us - a full price ticket is less than the cost of your average working lunch in LA, and no one is 
+        selling you anything at the event. For those facing financial hardship, please reach out to our team - scholarships are available.
+      </p>
+      <p>
+        P.S. A little birdy told us your boss will probably sponsor your attendance as part of your learning and development. 
+        Did we mention your ticket is the price of a single lunch? ;) 
+      </p>
+      <p>
+        <strong>Can I bring a friend?</strong>
+      </p>
+      <p>
+        Our goal is to reach as many people as possible, and to connect more people in our LA tech community. 
+        Please invite your friends to share this powerful experience with you – send this link to them right now!
+      </p>
+      <p>
+        <strong>What is the dress code?</strong>
+      </p>
+      <p>
+        Whatever makes you feel your best is perfect. Anything you feel inspired to wear that makes you feel like you, wear that! 
+      </p>
+      <p>
+        <strong>What happens after I buy my ticket?</strong>
+      </p>
+      <p>
+        You'll receive a confirmation from Eventbrite. There's no need to print your ticket to bring along to the event as we'll have 
+        you on the guestlist. Please email us if you'd like to change the name on your ticket, as they're non-refundable.
+      </p>
+      <p>
+        <strong>Is lunch provided?</strong>
+      </p>
+      <p>
+        YES! Brains need fuel to function, so lunch will be provided. For more information regarding our efforts to accommodate dietary 
+        needs, please reach out to our team.
+      </p>
+      <p>
+        <strong>Can I claim my ticket as a business expense?</strong>
+      </p>
+      <p>
+        Training and development can often be claimed as a business expense, to write off against tax. 
+        We are not qualified to give legal or tax advice, so please verify with your accountant and attorney to understand your expenses. 
+      </p>
+      <p>
+        <strong>Can you really up-level my tech skills in just 1 day?</strong>
+      </p>
+      <p>
+        Yes - there is power in immersion, accelerating your results. Also, our in-person 
+        experience will support you in creating meaningful relationships which will help you in cultivating your ongoing success. 
+      </p>
+      <p>
+        <strong>What if I can’t keep up and everyone’s more advanced than me?</strong>
+      </p>
+      <p>
+        There will be people at all different levels and you are 100% welcome no matter where you’re at. 
+      </p> 
+      <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a>
+  
   </section>
   <section class="text-center" *ngIf="config?.eventType === 'IWD'">
     <p>
@@ -234,7 +449,7 @@
   <section class="section" *ngIf="(sponsors$ | async)?.length > 0 && sponsors$ | async as sponsors">
     <div class="col sponsors">
       <h4>We partner with some of the<br/>world's most innovative brands.</h4>
-      <a *ngIf="config?.sponsorURL" class="btn btn-primary waves-light" [href]="config?.sponsorURL" target="_blank" rel="noopener">Become a Sponsor</a>
+      <a *ngIf="config?.sponsorURL" class="btn btn-primary waves-light" [href]="config?.https://forms.gle/VxvcXkz5N4RJtUvm8" target="_blank" rel="noopener">Become a Sponsor</a>
     </div>
     <div class="col sponsors" *ngFor="let level of levels$ | async">
       <h3 style="font-weight: bold;">
