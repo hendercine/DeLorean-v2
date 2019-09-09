@@ -34,64 +34,12 @@
     <h2 class="h2-responsive">About</h2>
   </div>
 
-  <!--Section: About-->
-  <section class="text-center" *ngIf="!config?.eventType || config?.eventType === 'DevFest'">
-    <p>
-      Back by popular demand….<strong>{{ config?.eventName }}</strong><br>
-      DevFest is a 100% community organized, full-day developer conference featuring world-class technology thought leaders and members of the Google product team.
-    </p>
-    <p>
-      What does that actually mean?<br>
-      We’re bringing you an all-in one opportunity to uplevel your game as a techie, whether you’re a total beginner, and expert, or somewhere in-between…<br>
-      … to learn about new technologies, with practical strategies to learn and implement them… <br>
-      … to connect with the LA tech community in a setting where we’ve done the hard work for you …<br>
-      … the event’s structure and our support team are there for you, ensuring everyone feels welcomed and included…<br>
-      … where we can all get inspired by getting to know more about each other while exploring cutting edge technologies!<br>
-      <br>
-      Most conferences and networking events leave you in a room to fend for yourself. They focus on the information, and maybe even the implementation…<br>
-      But they’re completely leaving out the greater part of the equation: human interaction. And we don’t blame them - it’s easy to overlook that the humans are the most important part of building great tech!<br>
-      Even with the world’s greatest content, you can’t transcend your career blocks if you’re disconnected from the community around you…<br>
-      If you don’t think you’re cool and interesting enough for others to connect with, you won’t put yourself out there.
-    </p>
-    <p>
-      Trust us, we know you might be thinking…<br>
-      <strong>I know enough (technologies, people), I just need to know what to do next.</strong><br>
-      We’ve got you. We’re going to cover it all, and more when you join us at DevFest LA 2019!<br>
-      You’ll go deep with us, and we’ll be with every one of you every step of the way.
-    </p>
-    <!-- <p>
-      <strong>{{ config?.eventName }}</strong> is a 100% community organized full-day developer conference featuring awesome
-      world-class speakers from technology leaders within the community as well as Google product team&nbsp;developers.
-    </p> -->
-  </section>
-  <section class="text-center" *ngIf="config?.eventType === 'IWD'">
-    <p>
-      <strong>International Women's Day</strong> (IWD) is marked on March 8th every year. In different regions around the globe,
-      the focus of celebrations ranges from general respect and appreciation for women to a celebration of women's economic,
-      political, and social achievements. Each IWD will be tailored to local communities of women in technology. Summits and meetups
-      around the world may feature hands-on coding workshops, inspiring speakers, and networking opportunities.
-    </p>
-    <p>
-      <strong>{{ config?.eventName }}</strong> is a 100% community organized event that aims to provide visibility, community, and resources
-      for women in technology. Our event is designed to promote an environment of inclusivity for women in tech, as well as celebrate
-      women innovators and leaders in the industry.
-    </p>
-  </section>
-  <section class="text-center" *ngIf="config?.eventType === 'Other'">
-    <p [innerHTML]="config?.eventDescription"></p>
-  </section>
-  <section class="text-center" *ngIf="config?.eventGoogle || config?.eventFacebook || config?.eventTwitter || config?.eventInstagram">
-    <!--Social buttons-->
-    <div class="social-section mb-3">
-      <h5 class="title mt-3 mb-4">Follow us on social media</h5>
-      <ul>
-        <li *ngIf="config?.eventGoogle"><a class="btn-social-all" href="https://plus.google.com/{{ config?.eventGoogle }}" title="Google+" target="_blank" rel="noopener"><i class="fa fa-google-plus"></i></a></li>
-        <li *ngIf="config?.eventFacebook"><a class="btn-social-all" href="https://www.facebook.com/{{ config?.eventFacebook }}" title="Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
-        <li *ngIf="config?.eventTwitter"><a class="btn-social-all" href="https://twitter.com/{{ config?.eventTwitter }}" title="Twitter" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
-        <li *ngIf="config?.eventInstagram"><a class="btn-social-all" href="https://www.instagram.com/{{ config?.eventInstagram }}" title="Instagram" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
-      </ul>
-    </div>
-    <!--/.Social buttons-->
+ <!--Section: About-->
+  <section class="text-center" *ngIf="!config?.eventType || config?.eventType === 'DevFest'">
+    <p>
+      <strong>{{ config?.eventName }}</strong><br>
+      DevFest is a 100% community organized, full-day developer conference featuring world-class technology thought leaders and members of the Google product team.
+    </p>
   </section>
   <!--Section: About-->
 
@@ -276,4 +224,55 @@
     </div>
   </section>
   <!--Section: Sponsors-->
+
+  <div class="divider-new" *ngIf="config?.venueGeoData">
+    <h2 class="h2-responsive">More Info</h2>
+  </div>
+
+  <!--Section: More Info-->
+  <section class="text-center" *ngIf="!config?.eventType || config?.eventType === 'DevFest'">
+    <p>
+      What does that <strong>actually</strong> mean?<br>
+      We’re bringing you an all-in one opportunity to <strong>uplevel</strong> your game as a techie, whether you’re a total beginner, and expert, or somewhere in-between…<br>
+      … to learn about <strong>new technologies</strong>, with <strong>practical strategies</strong> to learn and implement them… <br>
+      … to <strong>connect with the LA tech community</strong> in a setting where <strong>we’ve done the hard work for you</strong> …<br>
+      … the event’s structure and our support team are there for you, ensuring everyone feels welcomed and included…<br>
+      … where we can all get inspired by getting to know more about each other while exploring cutting edge technologies!<br>
+      <br>
+      Most conferences and networking events leave you in a room to fend for yourself. They focus on the <strong>information</strong>, and maybe even the <strong>implementation</strong> …<br>
+      But they’re <strong>completely</strong> leaving out the greater part of the equation: <strong>human interaction</strong>. And we don’t blame them - it’s easy to overlook that the humans are the most important part of building great tech!<br>
+      Even with the world’s greatest content, you can’t transcend your career blocks if you’re disconnected from the community around you…<br>
+      If you don’t think you’re cool and interesting enough for others to connect with, you won’t put yourself out there.
+    </p>
+    <p>
+      Trust us, we know you might be thinking…<br>
+      <strong>I know enough (technologies, people), I just need to know what to do next.</strong><br>
+      We’ve got you. We’re going to cover it all, and more when you join us at DevFest LA 2019!<br>
+      You’ll go deep with us, and we’ll be with every one of you every step of the way.<br>
+      <br>
+      Hang on a moment, <strong>who are you people?</strong><br>
+      We are community organizers leading Google Developer Groups (GDGs) in the Los Angeles area!<br>
+      A GDG is a <strong>Google-sponsored, 100% community organized group bringing developers and other techies together</strong> to explore new technologies and build deep connections...<br>
+      In practice, all this means is: we’re a bunch of people who meet regularly, support one another, and learn about cool tech stuff. It's awesome!<br>
+      We <u>pinky promise</u> that when you come to DevFest, you will have <strong>fun</strong>, you will <strong>learn</strong> something, and you will <strong>connect</strong> with someone new!
+    </p>
+<img src="https://firebasestorage.googleapis.com/v0/b/devfest-delorean.appspot.com/o/2019%2FsiteConfig%2FmeetGDG.png?alt=media&token=46fbe352-b78f-42f0-a3bf-ff7e1b37a397" alt="meetGDG">
+  </section>
+  <section class="text-center" *ngIf="config?.eventType === 'Other'">
+    <p [innerHTML]="config?.eventDescription"></p>
+  </section>
+  <section class="text-center" *ngIf="config?.eventGoogle || config?.eventFacebook || config?.eventTwitter || config?.eventInstagram">
+    <!--Social buttons-->
+    <div class="social-section mb-3">
+      <h5 class="title mt-3 mb-4">Follow us on social media</h5>
+      <ul>
+        <li *ngIf="config?.eventGoogle"><a class="btn-social-all" href="https://plus.google.com/{{ config?.eventGoogle }}" title="Google+" target="_blank" rel="noopener"><i class="fa fa-google-plus"></i></a></li>
+        <li *ngIf="config?.eventFacebook"><a class="btn-social-all" href="https://www.facebook.com/{{ config?.eventFacebook }}" title="Facebook" target="_blank" rel="noopener"><i class="fa fa-facebook"></i></a></li>
+        <li *ngIf="config?.eventTwitter"><a class="btn-social-all" href="https://twitter.com/{{ config?.eventTwitter }}" title="Twitter" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a></li>
+        <li *ngIf="config?.eventInstagram"><a class="btn-social-all" href="https://www.instagram.com/{{ config?.eventInstagram }}" title="Instagram" target="_blank" rel="noopener"><i class="fa fa-instagram"></i></a></li>
+      </ul>
+    </div>
+    <!--/.Social buttons-->
+  </section>
+  <!--Section: More Info-->
 </div>
