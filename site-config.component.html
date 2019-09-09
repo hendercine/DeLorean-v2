@@ -1,0 +1,223 @@
+<app-top-menu></app-top-menu>
+
+<div class="between-sections"><br><br></div>
+<div class="container">
+  <section class="section">
+    <h1 class="section-heading">Site Config</h1>
+    <div class="row">
+      <section class="col-md-12">
+        <form novalidate>
+          <h2 class="title">
+            <strong>GDG/WTM Group Details:</strong>
+          </h2>
+          <br>
+          <div class="md-form">
+            <i class="fa fa-users prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.groupName" name="groupName" #groupName="ngModel" id="groupName" class="form-control" required>
+            <label for="groupName" [class.active]="siteConfig.groupName && siteConfig.groupName.length > 0">Group Name: <small>(required)</small></label>
+            <div *ngIf="groupName.invalid && (groupName.dirty || groupName.touched)" class="text-danger">
+              <div *ngIf="groupName.errors.required">
+                Group Name is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-link prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.groupWebsite" name="groupWebsite" #groupWebsite="ngModel" id="groupWebsite" class="form-control" required>
+            <label for="groupWebsite" [class.active]="siteConfig.groupWebsite && siteConfig.groupWebsite.length > 0">Website URL: <small>(required)</small></label>
+            <div *ngIf="groupWebsite.invalid && (groupWebsite.dirty || groupWebsite.touched)" class="text-danger">
+              <div *ngIf="groupWebsite.errors.required">
+                Group Website URL is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-google-plus prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.googleLink" name="googleLink" id="googleLink" class="form-control">
+            <label for="googleLink" [class.active]="siteConfig.googleLink && siteConfig.googleLink.length > 0">Google+: <em>(only add the +handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-facebook prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.facebookLink" name="facebookLink" id="facebookLink" class="form-control">
+            <label for="facebookLink" [class.active]="siteConfig.facebookLink && siteConfig.facebookLink.length > 0">Facebook: <em>(only add the handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-twitter prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.twitterLink" name="twitterLink" id="twitterLink" class="form-control">
+            <label for="twitterLink" [class.active]="siteConfig.twitterLink && siteConfig.twitterLink.length > 0">Twitter: <em>(only add the handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-instagram prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.instagramLink" name="instagramLink" id="instagramLink" class="form-control">
+            <label for="instagramLink" [class.active]="siteConfig.instagramLink && siteConfig.instagramLink.length > 0">Instagram: <em>(only add the handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-meetup prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.meetupLink" name="meetupLink" id="meetupLink" class="form-control">
+            <label for="meetupLink" [class.active]="siteConfig.meetupLink && siteConfig.meetupLink.length > 0">Meetup: <em>(only add the handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-github prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.githubLink" name="githubLink" id="githubLink" class="form-control">
+            <label for="githubLink" [class.active]="siteConfig.githubLink && siteConfig.githubLink.length > 0">GitHub: <em>(only add the handle)</em></label>
+          </div>
+          <hr class="my-5">
+          <h2 class="title">
+            <strong>Event Details:</strong>
+          </h2>
+          <br>
+          <div class="md-form dl-select">
+            <i class="fa fa-calendar-check-o prefix grey-text"></i>
+            <label for="level">Event Type:&nbsp;<small>(required)</small></label>
+            <select class="mdb-select" id="eventType" [(ngModel)]="siteConfig.eventType" name="eventType">
+              <option value="" disabled selected>Choose your option</option>
+              <option value="DevFest">DevFest</option>
+              <option value="IWD">International Women's Day (IWD)</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-google prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventName" name="eventName" #eventName="ngModel" id="eventName" class="form-control" required>
+            <label for="eventName" [class.active]="siteConfig.eventName && siteConfig.eventName.length > 0">Event Name: <em>(ex. DevFest KC 2018)</em>&nbsp;<small>(required)</small></label>
+            <div *ngIf="eventName.invalid && (eventName.dirty || eventName.touched)" class="text-danger">
+              <div *ngIf="eventName.errors.required">
+                Event Name is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form" *ngIf="siteConfig.eventType === 'Other'">
+            <i class="fa fa-info-circle prefix grey-text"></i>
+            <textarea mdbActive type="text" id="eventDescription" class="md-textarea" style="height: 100px" [(ngModel)]="siteConfig.eventDescription"
+              name="eventDescription"></textarea>
+            <label for="eventDescription" [class.active]="siteConfig.eventDescription && siteConfig.eventDescription.length > 0">Event Description: <em>(simple HTML allowed)</em>&nbsp;<small>(required)</small></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-calendar prefix grey-text"></i>
+            <input type="date" [(ngModel)]="siteConfig.eventDate" name="eventDate" #eventDate="ngModel" id="eventDate" placeholder="" class="form-control" required>
+            <label class="active" for="eventDate">Event Date: <small>(required)</small></label>
+            <div *ngIf="eventDate.invalid && (eventDate.dirty || eventDate.touched)" class="text-danger">
+              <div *ngIf="eventDate.errors.required">
+                Event Date is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-globe prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventLink" name="eventLink" #eventLink="ngModel" id="eventLink" class="form-control" required>
+            <label for="eventLink" [class.active]="siteConfig.eventLink && siteConfig.eventLink.length > 0">Event Website URL: <small>(required)</small></label>
+            <div *ngIf="eventLink.invalid && (eventLink.dirty || eventLink.touched)" class="text-danger">
+              <div *ngIf="eventLink.errors.required">
+                Event Website URL is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-envelope prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventEmail" name="eventEmail" #eventEmail="ngModel" id="eventEmail" class="form-control" required>
+            <label for="eventEmail" [class.active]="siteConfig.eventEmail && siteConfig.eventEmail.length > 0">Event Email Address: <em>(ex. devfest@gmail.com)</em>&nbsp;<small>(required)</small></label>
+            <div *ngIf="eventEmail.invalid && (eventEmail.dirty || eventEmail.touched)" class="text-danger">
+              <div *ngIf="eventEmail.errors.required">
+                Event Email Address is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-envelope-o prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventReportEmail" name="eventReportEmail" #eventReportEmail="ngModel" id="eventReportEmail" class="form-control" required>
+            <label for="eventReportEmail" [class.active]="siteConfig.eventReportEmail && siteConfig.eventReportEmail.length > 0">Event Code of Conduct Team Email: <em>(ex. coc@devfestcity.com)</em>&nbsp;<small>(required)</small></label>
+            <div *ngIf="eventReportEmail.invalid && (eventReportEmail.dirty || eventReportEmail.touched)" class="text-danger">
+              <div *ngIf="eventReportEmail.errors.required">
+                Event Code of Conduct Team Email is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-user-secret prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventAnonReport" name="eventAnonReport" #eventAnonReport="ngModel" id="eventAnonReport" class="form-control" required>
+            <label for="eventAnonReport" [class.active]="siteConfig.eventAnonReport && siteConfig.eventAnonReport.length > 0">Event Anonymous Harassment Form URL: <small>(required)</small></label>
+            <div *ngIf="eventAnonReport.invalid && (eventAnonReport.dirty || eventAnonReport.touched)" class="text-danger">
+              <div *ngIf="eventAnonReport.errors.required">
+                Event Anonymous Harassment Form URL is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-google-plus prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventGoogle" name="eventGoogle" id="eventGoogle" class="form-control">
+            <label for="eventGoogle" [class.active]="siteConfig.eventGoogle && siteConfig.eventGoogle.length > 0">Event Google+: <em>(only add the +handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-facebook prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventFacebook" name="eventFacebook" id="eventFacebook" class="form-control">
+            <label for="eventFacebook" [class.active]="siteConfig.eventFacebook && siteConfig.eventFacebook.length > 0">Event Facebook: <em>(only add the handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-twitter prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventTwitter" name="eventTwitter" id="eventTwitter" class="form-control">
+            <label for="eventTwitter" [class.active]="siteConfig.eventTwitter && siteConfig.eventTwitter.length > 0">Event Twitter: <em>(only add the handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-instagram prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventInstagram" name="eventInstagram" id="eventInstagram" class="form-control">
+            <label for="eventInstagram" [class.active]="siteConfig.eventInstagram && siteConfig.eventInstagram.length > 0">Event Instagram: <em>(only add the handle)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-hashtag prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.eventHashtag" name="eventHashtag" id="eventHashtag" class="form-control">
+            <label for="eventHashtag" [class.active]="siteConfig.eventHashtag && siteConfig.eventHashtag.length > 0">Event Hashtag: <em>(without the #)</em></label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-volume-up prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.speakerURL" name="speakerURL" id="speakerURL" class="form-control">
+            <label for="speakerURL" [class.active]="siteConfig.speakerURL && siteConfig.speakerURL.length > 0">Call for Papers URL:</label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-ticket prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.ticketURL" name="ticketURL" #ticketURL="ngModel" id="ticketURL" class="form-control" required>
+            <label for="ticketURL" [class.active]="siteConfig.ticketURL && siteConfig.ticketURL.length > 0">Purchase Ticket URL: <small>(required)</small></label>
+            <div *ngIf="ticketURL.invalid && (ticketURL.dirty || ticketURL.touched)" class="text-danger">
+              <div *ngIf="ticketURL.errors.required">
+                Event Ticket URL is required.
+              </div>
+            </div>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-usd prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.sponsorURL" name="sponsorURL" id="sponsorURL" class="form-control">
+            <label for="sponsorURL" [class.active]="siteConfig.sponsorURL && siteConfig.sponsorURL.length > 0">Sponsor Benefits URL:</label>
+          </div>
+          <hr class="my-5">
+          <h2 class="title">
+            <strong>Venue Details:</strong>
+          </h2>
+          <div class="md-form">
+            <i class="fa fa-map-marker prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.venueName" name="venueName" id="venueName" class="form-control">
+            <label for="venueName" [class.active]="siteConfig.venueName && siteConfig.venueName.length > 0">Venue Name:</label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-address-card prefix grey-text"></i>
+            <input type="text" [(ngModel)]="siteConfig.venueAddress" name="venueAddress" id="venueAddress" class="form-control">
+            <label for="venueAddress" [class.active]="siteConfig.venueAddress && siteConfig.venueAddress.length > 0">Venue Address:</label>
+          </div>
+          <div class="md-form">
+            <i class="fa fa-info-circle prefix grey-text"></i>
+            <textarea mdbActive type="text" id="venueDescription" class="md-textarea" style="height: 100px" [(ngModel)]="siteConfig.venueDescription"
+              name="venueDescription"></textarea>
+            <label for="venueDescription" [class.active]="siteConfig.venueDescription && siteConfig.venueDescription.length > 0">Venue Bio:</label>
+          </div>
+          <div class="form-group" style="padding-bottom: 25px;">
+            <label for="venuePhoto">Venue Photo:</label>
+            <input type="file" class="form-control-file" id="venuePhoto" accept="image/jpeg,image/jpg,image/png,image/x-png" aria-describedby="Venue Photo">
+          </div>
+          <div class="text-center">
+            <button class="btn btn-primary" *ngIf="addConfig" (click)="createConfig()">Save</button>
+            <button class="btn btn-primary" *ngIf="!addConfig" (click)="updateConfig()">Save Changes</button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </section>
+</div>
+<div class="between-sections"><br><br></div>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="full-height" itemscope itemtype="http://schema.org/Organization">
+
+<head>
+  <meta charset="utf-8">
+  <title>DevFest LA</title>
+  <base href="/">
+
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="theme-color" content="#4285F4">
+  <meta name="description" content="A tech conference carefully crafted for you by your GDG community! All about Android, Web, and Cloud from the world experts!">
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <meta itemprop="name" content="DevFest LA">
+  <meta itemprop="description" content="A tech conference carefully crafted for you by your GDG community! All about Android, Web, and Cloud from the world experts!">
+  <meta itemprop="image" content="assets/img/devfest.png">
+
+  <meta property="og:title" content="DevFest LA">
+  <meta property="og:site_name" content="DevFest LA">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://devfest.com/">
+  <meta property="og:description" content="A tech conference carefully crafted for you by your GDG community! All about Android, Web, and Cloud from the world experts!">
+  <meta property="og:type" content="Event">
+  <meta property="og:image" content="assets/img/devfest.png">
+  <meta property="og:image:type" content="image/png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@gdg">
+  <meta name="twitter:title" content="DevFest LA">
+  <meta name="twitter:description" content="A tech conference carefully crafted for you by your GDG community! All about Android, Web, and Cloud from the world experts!">
+  <meta name="twitter:image" content="assets/img/devfest.png">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <app-root></app-root>
+  <div class="loading">
+    <h1>loading...</h1>
+  </div>
+  <script>
+    //// Service Worker ////
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('SW registered');
+      })
+      .catch((err) => {
+        console.log('SW error', err);
+      });
+    }
+  </script>
+</body>
+
+</html>
