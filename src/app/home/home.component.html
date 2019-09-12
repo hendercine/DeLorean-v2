@@ -222,17 +222,20 @@
         </ng-container>
       </div>
     </div>
+    <br>
+    <div class="text-center">
+      <a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a>
+    </div>
   </section>
   <!--Section: Sponsors-->
 
-  <div class="divider-new" *ngIf="config?.venueGeoData">
+  <div id="about" class="divider-new pt-5">
     <h2 class="h2-responsive">More Info</h2>
   </div>
 
   <!--Section: More Info-->
   <section class="text-center" *ngIf="!config?.eventType || config?.eventType === 'DevFest'">
     <p>
-      What does that <strong>actually</strong> mean?<br>
       We’re bringing you an all-in one opportunity to <strong>uplevel</strong> your game as a techie, whether you’re a total beginner, and expert, or somewhere in-between…<br>
       … to learn about <strong>new technologies</strong>, with <strong>practical strategies</strong> to learn and implement them… <br>
       … to <strong>connect with the LA tech community</strong> in a setting where <strong>we’ve done the hard work for you</strong> …<br>
@@ -240,7 +243,9 @@
       … where we can all get inspired by getting to know more about each other while exploring cutting edge technologies!<br>
       <br>
       Most conferences and networking events leave you in a room to fend for yourself. They focus on the <strong>information</strong>, and maybe even the <strong>implementation</strong> …<br>
-      But they’re <strong>completely</strong> leaving out the greater part of the equation: <strong>human interaction</strong>. And we don’t blame them - it’s easy to overlook that the humans are the most important part of building great tech!<br>
+      But they’re <strong>completely</strong> leaving out the greater part of the equation: <strong>human interaction</strong>. 
+<br>
+And we don’t blame them - it’s easy to overlook that the humans are the most important part of building great tech!<br>
       Even with the world’s greatest content, you can’t transcend your career blocks if you’re disconnected from the community around you…<br>
       If you don’t think you’re cool and interesting enough for others to connect with, you won’t put yourself out there.
     </p>
@@ -252,11 +257,13 @@
       <br>
       Hang on a moment, <strong>who are you people?</strong><br>
       We are community organizers leading Google Developer Groups (GDGs) in the Los Angeles area!<br>
-      A GDG is a <strong>Google-sponsored, 100% community organized group bringing developers and other techies together</strong> to explore new technologies and build deep connections...<br>
+      GDGs are <span><strong>sponsored by Google and are 100% volunteer organized groups bringing developers and other techies together</strong></span> to explore new technologies and build deep connections...<br>
       In practice, all this means is: we’re a bunch of people who meet regularly, support one another, and learn about cool tech stuff. It's awesome!<br>
       We <u>pinky promise</u> that when you come to DevFest, you will have <strong>fun</strong>, you will <strong>learn</strong> something, and you will <strong>connect</strong> with someone new!
     </p>
 <img src="https://firebasestorage.googleapis.com/v0/b/devfest-delorean.appspot.com/o/2019%2FsiteConfig%2FmeetGDG.png?alt=media&token=46fbe352-b78f-42f0-a3bf-ff7e1b37a397" alt="meetGDG">
+<br>
+<div class="text-center"><a target="_blank" rel="noopener" [href]="config?.ticketURL" class="btn btn-primary btn-lg" rel="nofollow">Save my spot!</a></div>
   </section>
   <section class="text-center" *ngIf="config?.eventType === 'Other'">
     <p [innerHTML]="config?.eventDescription"></p>
